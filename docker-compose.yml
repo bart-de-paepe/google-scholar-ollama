@@ -32,7 +32,6 @@ services:
 
     depends_on:
       - mongodb
-      - ollama
 
     mem_limit: 512m
 
@@ -52,21 +51,6 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-
-  ollama:
-    image: ollama/ollama:latest
-    container_name: ollama
-    ports:
-      - "11434:11434"
-    volumes:
-      - ./ollama/ollama:/root/.ollama
-      - ./custom-entrypoint.sh:/custom-entrypoint.sh
-    pull_policy: always
-    tty: true
-    restart: always
-    #environment:
-    #  - OLLAMA_DEBUG=1
-    entrypoint: [ "/usr/bin/bash", "/custom-entrypoint.sh" ]
 
 volumes:
   mongo-data:
