@@ -48,7 +48,7 @@ RUN BROWSER_MAJOR=$(google-chrome --version | sed 's/.* \([0-9]\+\.[0-9]\+\.[0-9
     if [ $BROWSER_MAJOR != $DRIVER_MAJOR ]; then echo "VERSION MISMATCH"; exit 1; fi
 
 # Reset the entrypoint, don't invoke `uv`
-ENTRYPOINT []
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 # Run the FastAPI application by default
 # Uses `fastapi dev` to enable hot-reloading when the `watch` sync occurs

@@ -4,8 +4,6 @@ import bs4
 import ollama
 from bson import ObjectId
 
-from mirascope import llm
-from pydantic import BaseModel
 from scrapegraphai.graphs import SmartScraperGraph
 
 from app.src.domain.email_body import EmailBody

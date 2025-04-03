@@ -14,5 +14,6 @@ dependencies = [
     "pymupdf==1.25.3",
     "python-dotenv==1.0.1",
     "requests-toolbelt==1.0.0",
+    "scrapegraphai>=1.46.0",
     "selenium==4.29.0",
 ]

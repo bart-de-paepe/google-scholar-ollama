@@ -1,0 +1,31 @@
+# Incoming Mail (IMAP) server address
+MAIL_SERVER="kms.vliz.be"
+MAIL_SERVER_PORT=993
+MAIL_SERVER_ENCRYPTION_METHOD="TLS"
+
+# Should contain the mail address used for reading and extracting inbox emails
+MAIL_ADDRESS="google-scholar@marineinfo.org"
+
+# Please note that instead of a regular Gmail password, this variable should contain an "app code" instead
+# An app code is a secure way to authenticate an application without revealing the actual Gmail password
+# To create an app code, follow these steps:
+# 1. Go to your Google Account settings (https://myaccount.google.com/security)
+# 2. In the "Security" section, select "App passwords"
+# 3. Generate a new app password for your application, and use that generated code here
+MAIL_PASSWORD=""
+
+SENDER="scholaralerts-noreply@google.com"
+
+CONTENT_TYPE_HTML='text/html'
+CONTENT_TYPE_PDF='application/pdf'
+
+# Database
+DATABASE="imis-google-scholar-ollama"
+COLLECTION_EMAILS="emails"
+COLLECTION_SEARCH_RESULTS="search-results"
+COLLECTION_CROSSREF="crossref"
+
+# LOGGING
+LOGGING_FILENAME="app_logging.log"
+LOGGING_LEVEL="DEBUG"
+
